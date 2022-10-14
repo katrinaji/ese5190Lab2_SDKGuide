@@ -25,7 +25,7 @@
 In this way, we can run the command in Intel architecture.
 
 ## Step 2 Install Homebrew and required packages
-1. Change the shell from zch to bash
+1. Change the shell from zch to bash by directly typing ```bash``` in terminal and hit Enter.
 2. Copy and paste the following command and hit Enter
 
 ```
@@ -33,7 +33,10 @@ $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
 ```
 
 3. After a while, you will see a line: "Installation Successful!" This means Homebrew is installed on our system.
-4. Put in the following commands each by each to install the necessary package for this lab (cmake, ArmMbed/homebrew-formulae, and arm-none-eabi-gcc)
+4. Put in the following commands line by line to install the necessary package for this lab
+   - cmake 
+   - ArmMbed/homebrew-formulae 
+   - arm-none-eabi-gcc
 
 ```
 $ brew install cmake
@@ -46,13 +49,13 @@ $ brew install arm-none-eabi-gcc
 ![WX20221013-210131](https://user-images.githubusercontent.com/114244957/195738671-80cc8ec9-4f6f-4da6-beb4-de81fe4af9dd.png)
 
 ## Step 3 Get the SDK and examples (Setup Guide Section 2.1 & 2.3)
-1. Create a pico dictionary to put the examples
+1. Create a pico directionary to put the examples
 ```
 $ cd ~/
 $ mkdir pico
 $ cd pico
 ```
-2. Clone the ```pico-sdk``` and ```pico-examples``` git repositories
+2. Clone the "pico-sdk" and "pico-examples" git repositories
 ```
 $ git clone -b master https://github.com/raspberrypi/pico-sdk.git
 $ cd pico-sdk
@@ -67,29 +70,32 @@ $ git pull
 $ git submodule update
 ```
 
-## Step 4 Compile and Print "Hello World!"
+## Step 4 Compile "Hello World!"
+Now we get the examples and set up the SDK. We will run the "Hello World" function to test.
+1. Input the following commands to create a space for C-programming.
+```
+$ cd pico-examples
+$ mkdir build
+$ cd build
+```
+2. Set the ```PICO_SDK_PATH``` by putting the command ``` $ export PICO_SDK_PATH=../../pico-sdk```
+3. Run ```cmake ..``` to prepare the cmake build directory. If we look into the build file now, we can see all the examples with CMakeFiles ready. This will enable us to build c under the directionary.
+4. Enter the hello_world directionary.
+```
+$ cd blink
+$ make -j2
+```
+Since RP2040 has two cores, we want to parallel two cores to speed up processing speed.
 
+5. We now get ''hello-world.uf2'' under the usd directionary
 
+## Step 5 Load and Print "Hello World!"
+1. Plug in RP2040
+2. Move the ''hello-world.uf2'' to the RP2040 folder. You can either drag and drop the file using GUI, or use ```mv``` command. RP2040 is under ```/Volumes```
+3. RP2040 will eject automatically.
+4. Reboot the chip by holding the "BOOT" button while pressing "RST".
+5. Follow the steps in prelab by finding the port and use the serial console. 
 
+For my Mac, my command is ```screen /dev/tty.usbmodem2101 115200```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![WX20221013-222447](https://user-images.githubusercontent.com/114244957/195751573-a505588f-9c78-4574-aa13-941c72a86acf.png)
