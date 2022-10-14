@@ -1,5 +1,6 @@
 # ese5190Lab2_SDKGuide 
 (Reference to https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf Section 9)
+
 (Reference to YuChen Wang: https://github.com/YuchenWang0303/Documentation-of-M1-MacBook-to-use-QT-PY-2040-)
 
 ## Laptop Info:
@@ -8,10 +9,10 @@
 	Chip: Apple M1 Pro
 
 ## Software List
-	HomeBrew
-	cmake
-	ArmMbed/homebrew-formulae
-	arm-none-eabi-gcc
+1. HomeBrew
+2. cmake
+3. ArmMbed/homebrew-formulae
+4. arm-none-eabi-gcc
 	
 
 ## Step 1 Using X86 Terminal on M1 Pro chip
@@ -67,3 +68,28 @@ $ git submodule update
 ```
 
 ## Step 4 Compile and Print "Hello World!"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
