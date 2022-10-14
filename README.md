@@ -1,5 +1,5 @@
 # ese5190Lab2_SDKGuide 
-(Reference to https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf Section 9)
+(Reference to https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf Section 2,3,4,9)
 
 (Reference to YuChen Wang: https://github.com/YuchenWang0303/Documentation-of-M1-MacBook-to-use-QT-PY-2040-)
 
